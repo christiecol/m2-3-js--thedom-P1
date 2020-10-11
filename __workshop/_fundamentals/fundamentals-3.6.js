@@ -17,8 +17,33 @@
 // For example:
 // calculator(["add", 10, 20]); // 30
 
+//keeps failing and I can't figure out why
 function calculator(arr) {
   // Your code here
+  let calculation = arr[0];
+  let value1 = arr[1];
+  let value2 = arr[2];
+
+  if (typeof value1 !== "number" || typeof value2 !== "nnumber") {
+    return undefined;
+  }
+
+  switch (calculation) {
+    case "add":
+      return value1 + value2;
+      break;
+    case "sub":
+      return value1 - value2;
+      break;
+    case "mul":
+      return value1 * value2;
+      break;
+    case "div":
+      return value1 / value2;
+      break;
+    default:
+      return undefined;
+  } // nothing I have put in my typeof if condition is passing
 }
 
 // Part 2 - Test

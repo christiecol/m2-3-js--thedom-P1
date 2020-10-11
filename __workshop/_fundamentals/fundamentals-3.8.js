@@ -7,6 +7,16 @@
 
 function reverseIt(str) {
   // Your code here
+  // let splitString = str.split("");
+  // let reverseArray = splitString.reverse();
+  // let joinArray = reverseArray.join("");
+  // return joinArray;
+  let newString = "";
+
+  for (let i = str.length - 1; 1 >= 0; i--) {
+    newString = newString + str[i];
+  }
+  return newString;
 }
 
 // Part 2 - Test

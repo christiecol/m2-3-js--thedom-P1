@@ -11,8 +11,25 @@
 //
 // example: repeat(['foo', 3]) returns 'foofoofoo'
 
+// nothing I have put in my typeof if condition is passing
 function repeat(arr) {
   // Your code here
+  let stringToBeRepeated = arr[0];
+  let repeatTimes = arr[1];
+  let result = "";
+
+  if (typeof stringToBeRepeated !== "string" || isNaN(repeatTimes)) {
+    return undefined;
+  }
+
+  if (repeatTimes < 0) {
+    return result;
+  }
+
+  for (let i = 0; i < repeatTimes; i++) {
+    result = result + stringToBeRepeated;
+  }
+  return result;
 }
 
 // Part 2 - Test

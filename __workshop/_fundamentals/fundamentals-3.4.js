@@ -8,7 +8,15 @@
 // - If the array contains any values that are not a number, the function should return undefined.
 
 function sum(arr) {
-  // Your code here
+  let theList = arr;
+  if (theList.every((listItem) => typeof listItem !== "number")) {
+    return undefined;
+  } else {
+    const add = (a, b) => a + b;
+
+    const sum = arr.reduce(add);
+    return sum;
+  }
 }
 
 // Part 2 - Test
